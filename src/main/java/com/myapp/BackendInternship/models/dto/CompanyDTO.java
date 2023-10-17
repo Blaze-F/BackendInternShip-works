@@ -1,4 +1,4 @@
-package com.myapp.BackendInternship.models.entity;
+package com.myapp.BackendInternship.models.dto;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -6,10 +6,10 @@ import lombok.*;
 
 @Getter
 @Setter
-@AllArgsConstructor(access = AccessLevel.PROTECTED)
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
-public class Company {
+public class CompanyDTO {
     @Id
     private Long id;
     private String name;

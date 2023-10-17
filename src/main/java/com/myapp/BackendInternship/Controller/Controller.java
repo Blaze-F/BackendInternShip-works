@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class Controller {
     @Autowired
     private Service service;
-    public void get_company(long id){
+    public void getCompany(long id){
     }
 }
