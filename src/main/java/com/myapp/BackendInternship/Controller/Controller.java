@@ -4,10 +4,7 @@ import com.myapp.BackendInternship.models.dto.ArticleDTO;
 import com.myapp.BackendInternship.models.entity.Article;
 import com.myapp.BackendInternship.service.Service;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,6 +25,14 @@ public class Controller {
         return service.findAllArticle();
     }
 
+    @DeleteMapping("/article/delete")
+    public String deleteArticle(long id) {
 
+        return id + "delete succeed";
+    }
+//    @PutMapping("/company/edit/")
+//    public ArticleDTO editArticle(@RequestBody ArticleDTO articleDTO, long articleId){
+//        return
+//    }
 
 }
