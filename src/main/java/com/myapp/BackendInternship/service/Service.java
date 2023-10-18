@@ -46,6 +46,12 @@ public class Service {
         return articleList.stream().map((e -> modelMapper.map(e,ArticleDTO.class))).collect(Collectors.toList());
     }
 
+    public ArticleDTO editArticle(ArticleDTO articleDTO, long id){
+        articleDTO.setId(id);
+        Article mappedClass = articleRepository.save(modelMapper.map(articleDTO,Article.class));
+        return modelMapper.map(mappedClass,ArticleDTO.class);
+    }
+
 
 
     public void deleteArticle(long id){

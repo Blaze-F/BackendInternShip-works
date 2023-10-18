@@ -3,6 +3,7 @@ package com.myapp.BackendInternship.Controller;
 import com.myapp.BackendInternship.models.dto.ArticleDTO;
 import com.myapp.BackendInternship.models.entity.Article;
 import com.myapp.BackendInternship.service.Service;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,6 +21,12 @@ public class Controller {
         return service.createArticle(articleDTO,companyId);
     }
 
+    @GetMapping("/article/find")
+    public List<ArticleDTO> articleDTOList(HttpServletRequest request){
+        String companyName = request.getParameter("name");
+        return service.findArticleByCompany(companyName);
+    }
+
     @GetMapping("/company/list")
     public List<ArticleDTO> findAllArticle() {
         return service.findAllArticle();
@@ -30,9 +37,9 @@ public class Controller {
 
         return id + "delete succeed";
     }
-//    @PutMapping("/company/edit/")
-//    public ArticleDTO editArticle(@RequestBody ArticleDTO articleDTO, long articleId){
-//        return
-//    }
+    @PutMapping("/company/edit")
+    public ArticleDTO editArticle(@RequestBody ArticleDTO articleDTO, long articleId){
+        return service.editArticle(articleDTO,articleId);
+    }
 
 }
