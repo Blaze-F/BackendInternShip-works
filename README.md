@@ -62,7 +62,6 @@ DELETE /article/{id}
 Response:
 
 ```json
-Copy code
 {
   "message": "1 deleted succeed"
 }
