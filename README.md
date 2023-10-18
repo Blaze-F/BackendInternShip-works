@@ -116,4 +116,7 @@ Response:
     "position": "Frontend Developer",
     "reward": 500000,
   }
-] ```
+]
+```
+
+## 테스트코드 작성
