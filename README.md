@@ -1,3 +1,12 @@
+## 채용공고 등록 서비스
+
+## 사용 기술
+- JAVA 17
+- SpringBoot
+    - modelmapper
+    - Gradle
+    - SpringDataJPA
+- Mysql
 
 
 
