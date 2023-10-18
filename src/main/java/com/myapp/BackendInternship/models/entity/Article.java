@@ -6,11 +6,10 @@ import jakarta.persistence.ManyToOne;
 import lombok.*;
 import org.springframework.stereotype.Component;
 
-@Getter
-@Setter
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
+@Builder
 public class Article {
     @Id
     private Long id;

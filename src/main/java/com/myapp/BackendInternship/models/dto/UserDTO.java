@@ -12,12 +12,10 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
 public class UserDTO {
 
-    @Id
-    private Long id;
 
+    private Long id;
     private String name;
     private String password;
 

@@ -8,9 +8,8 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
 public class CompanyDTO {
-    @Id
+
     private Long id;
     private String name;
     private String nation;

@@ -7,10 +7,9 @@ import lombok.*;
 
 import java.util.List;
 
-@Getter
-@Setter
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Builder
 @Entity
 public class User {
 

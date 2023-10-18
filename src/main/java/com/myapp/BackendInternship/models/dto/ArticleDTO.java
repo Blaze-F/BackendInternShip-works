@@ -11,13 +11,14 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
 public class ArticleDTO {
-    @Id
+
     private Long id;
     private String position;
     private int reward;
     private String describes;
+
+    private Company company;
 
 
 }
